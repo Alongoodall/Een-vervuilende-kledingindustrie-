@@ -35,11 +35,11 @@
   .jumbotron {
     background-color: #8f57d9;
     color: #fff;
-    padding: 70px 100px;
+    padding: 100px 250px;
     font-family: Gotu, sans-serif;
   }
   .container-fluid {
-    padding: 20px 50px;
+    padding: 60px 50px;
   }
   .bg-grey {
     background-color: #f6f6f6;
@@ -62,16 +62,7 @@
     height: 100%;
     margin-bottom: 10px;
   }
-  .carousel-control.right, .carousel-control.left {
-    background-image: none;
-    color: #8f57d9;
-  }
-  .carousel-indicators li {
-    border-color: #8f57d9;
-  }
-  .carousel-indicators li.active {  
-    background-color: #8f57d9;
-  } 
+
   .item h4 {
     font-size: 19px;
     line-height: 1.375em;
@@ -143,12 +134,12 @@
     color: #fff !important;
   }
   footer .glyphicon {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 20px;
     color: #8f57d9;
   }
 
-  @media screen and (max-width: 768px) {
+   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
       margin: 25px 0;
@@ -162,7 +153,6 @@
   @media screen and (max-width: 480px) {
     .logo {
       font-size: 150px;
-      margin-right:10px;
     }
   }
   </style>
@@ -204,12 +194,12 @@
 <!-- Deel 1 -->
 <div id="deel1" class="container-fluid">
   <div class="row">
-    <div class="col-sm-11">
+    <div class="col-sm-8">
       <h2>Inleiding</h2><br>
       <h4>Voor vele van ons is kleding meer dan een stuk textiel. Voor sommigen is kleding een manier om zichzelf te uiten als individu. Bij anderen speelt kleding een zeer belangrijke rol in hun cultuur en voor anderen is kleding niks meer dan een stuk stof om je warm te houden. Eén ding is moeilijk te ontkennen: kleding is onmisbaar onze huidige wereld. 
       Het heeft wereldwijd dan ook een van de grootste werksectoren; Het is, na de landbouw, de tweede grootste aanbieder van werk. Iedereen draagt immers elke dag kleding en heeft dit dus nodig. Er is vraag en aanbod vanuit alle landen uit verschillende continenten. De productie van kleding is de afgelopen jaren flink gestegen. De oorzaak ligt bij de toename van de aanschaf van kleding en de afname van de draagtijd van kleding.<br> Samenhangend met andere factoren heeft dit geleid tot de zogenoemde ‘fast fashion’. </h4>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <img class="img-responsive" src="https://files.duurzaambedrijfsleven.nl/images/article/18343/1280/duurzame-kleding.jpg" 
       alt="Foto van kleding">
     </div>
@@ -275,7 +265,6 @@ Polyester draagt bij aan de plastic soep en heeft een negatieve invloed op voora
   <!--Deel 5 -->
 <div id="deel5" class="container-fluid">
    <div class="row">
-    <div class="col-sm-12">
       <h2>Conclusie</h2>
           <h4>Na de verschillende problemen en mogelijke oplossingen bekeken te hebben, kunnen wij concluderen dat er veranderingen moeten komen vanaf twee kanten: de vraag- en de aanbodkant.Vanuit de aanbodkant zijn er op verschillende vlakken verbeteringen mogelijk voor een duurzamer proces.<br></h4>
           <p>-Lager waterverbruik<br>- Weinig tot geen gebruik van (schadelijke) chemicaliën en geen vervuiling van het water<br>- Lagere energieverbruik <br>- Opruimen van plastic <br>
@@ -296,20 +285,26 @@ Polyester draagt bij aan de plastic soep en heeft een negatieve invloed op voora
 <!-- jQuery voor smooth scrolling. Dit zal al in de oorspronkelijke code -->
 <script>
 $(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
+      // Prevent default anchor click behavior
       event.preventDefault();
 
-
+      // Store hash
       var hash = this.hash;
 
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){
    
+        // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
-    } 
+    } // End if
   });
   
   $(window).scroll(function() {
@@ -324,6 +319,7 @@ $(document).ready(function(){
   });
 })
 </script>
+
 
 </body>
 </html>
